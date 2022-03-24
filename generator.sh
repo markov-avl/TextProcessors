@@ -9,14 +9,18 @@ else
 fi
 
 for _ in {1..1000}; do
-	number=$(($RANDOM % 4))
-	if (( $number == 0 )); then
-		echo "куку" >> $file
-	elif (( $number == 1 )); then
-		echo "коко" >> $file
-	elif (( $number == 2 )); then
-                echo "кеке" >> $file
-	else
-		echo "кики" >> $file
-	fi
+	line="*"
+	for _ in {1..2}; do
+		number=$(($RANDOM % 4))
+		if (( $number == 0 )); then
+			line="$lineкуку*"
+		elif (( $number == 1 )); then
+			line="$lineкоко*"
+		elif (( $number == 2 )); then
+            line="$lineкеке*"
+		else
+			line="$lineкики*"
+		fi
+	done
+	echo $line >> $file
 done
