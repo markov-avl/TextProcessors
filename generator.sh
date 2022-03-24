@@ -17,7 +17,7 @@ for _ in {1..1000}; do
 		elif (( $number == 1 )); then
 			line="$lineкоко*"
 		elif (( $number == 2 )); then
-            line="$lineкеке*"
+			line="$lineкеке*"
 		else
 			line="$lineкики*"
 		fi
