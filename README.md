@@ -32,7 +32,7 @@ for _ in {1..1000}; do
 		elif (( $number == 1 )); then
 			line="$lineкоко*"
 		elif (( $number == 2 )); then
-            line="$lineкеке*"
+			line="$lineкеке*"
 		else
 			line="$lineкики*"
 		fi
@@ -41,7 +41,7 @@ for _ in {1..1000}; do
 done
 ```
 
-Скрипт для выполнения задания:
+Скрипт `script.sh` для выполнения задания:
 ```bash
 #!/bin/bash
 
@@ -65,7 +65,7 @@ sort file3 | uniq -u | tee file3 | while read line; do echo "$( grep -F "$line" 
 ## Вывод скрипта
 
 Если `file1` будет тот, что и в репозитории (там же и промежуточные файлы `file2` и `file3`), то будет следующий вывод:
-```bash
+```shell
 $:~/Projects/TextProcessors$ ./script.sh
 1 *кеке*кеке*
 1 *кики*куку*
